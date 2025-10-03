@@ -3,30 +3,25 @@
 Este proyecto analiza el impacto de la pandemia COVID-19 en la salud mental centrándose en cinco comunidades autónomas de España (Andalucía, Castilla y León, Galicia, Madrid y País Vasco), utilizando diferentes técnicas de análisis estadístico como PCA, modelo LDA, modelo Random forest y Clustering
 
 ## Estructura del repositorio
-Datos/                                  # Datasets usados
-  ├── datos_filtrados.csv
-  ├── datos_filtrados_conjunta.csv
-  ├── datos_filtrados_normalizados.csv
 
-R/                                      # Scripts de análisis
-  ├── 01_carga_paquetes.R
-  ├── 02_preprocesamiento.R
-  ├── PCA + LDA
-  ├── Random Forest
-  ├── Clustering
-
-Resultados/                             # Gráficos y tablas generadas
-  ├── PCA/
-  ├── LDA/
-  ├── RF/
-  ├── Clustering/
-
-README.md 
-
+├── datos/
+│   ├── datos_filtrados.csv
+│   ├── datos_filtrados_conjunta.csv
+│   └── datos_filtrados_normalizados.csv
+├── R/
+│   ├── PCA.R
+│   ├── LDA_RF.R
+│   └── Clustering.R
+├── Resultados/
+│   ├── clustering/
+│   ├── lda/
+│   ├── pca/
+│   └── rf/
+└── README.md
 
 ##Datos
 - datos_filtrados.csv: Datos filtrados por las 5 CCAA.
-- datos_filtrados_conjunta.csv: Datos combinados de todas las CCAA.
+- datos_filtrados_conjunta.csv: Datos combinados de todas las CCAA, incluyendo dos variables adicionales creadas para algunas técnicas: `impacto_raw` e `impacto_salud_mental`.
 - datos_filtrados_normalizados.csv: Datos normalizados para PCA y clustering.
 
 Cada dataset contiene variables sobre síntomas emocionales, impacto percibido, distribución sociodemográfica (edad, sexo, provincia) y factores adicionales.
@@ -66,4 +61,6 @@ Cada dataset contiene variables sobre síntomas emocionales, impacto percibido, 
 - GitHub: Arostegui33 (https://github.com/Arostegui33)
 
 ##Licencia
+
+Licencia: MIT
 
