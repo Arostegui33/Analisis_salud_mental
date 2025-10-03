@@ -1,0 +1,4 @@
+"Clase","Precision","Recall","F1_Score"
+"Alta Afectación",1,0.6,0.75
+"Moderada Afectación",0.909,1,0.952
+"Baja Afectación",1,0.964,0.981

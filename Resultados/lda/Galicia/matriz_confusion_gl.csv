@@ -1,0 +1,10 @@
+"","Prediction","Reference","Freq"
+"1","Alta Afectación","Alta Afectación",7
+"2","Moderada Afectación","Alta Afectación",0
+"3","Baja Afectación","Alta Afectación",0
+"4","Alta Afectación","Moderada Afectación",2
+"5","Moderada Afectación","Moderada Afectación",53
+"6","Baja Afectación","Moderada Afectación",1
+"7","Alta Afectación","Baja Afectación",0
+"8","Moderada Afectación","Baja Afectación",3
+"9","Baja Afectación","Baja Afectación",49
