@@ -4,20 +4,23 @@ Este proyecto analiza el impacto de la pandemia COVID-19 en la salud mental cent
 
 ## Estructura del repositorio
 
-├── datos/
-│   ├── datos_filtrados.csv
-│   ├── datos_filtrados_conjunta.csv
-│   └── datos_filtrados_normalizados.csv
-├── R/
-│   ├── PCA.R
-│   ├── LDA_RF.R
-│   └── Clustering.R
-├── Resultados/
-│   ├── clustering/
-│   ├── lda/
-│   ├── pca/
-│   └── rf/
-└── README.md
+**datos/**
+- datos_filtrados.csv
+- datos_filtrados_conjunta.csv
+- datos_filtrados_normalizados.csv
+
+**R/**
+- PCA.R
+- LDA_RF.R
+- Clustering.R
+
+**Resultados/**
+- clustering/
+- lda/
+- pca/
+- rf/
+
+
 
 ## Datos
 
