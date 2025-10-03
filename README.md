@@ -19,7 +19,8 @@ Este proyecto analiza el impacto de la pandemia COVID-19 en la salud mental cent
 │   └── rf/
 └── README.md
 
-##Datos
+## Datos
+
 - datos_filtrados.csv: Datos filtrados por las 5 CCAA.
 - datos_filtrados_conjunta.csv: Datos combinados de todas las CCAA, incluyendo dos variables adicionales creadas para algunas técnicas: `impacto_raw` e `impacto_salud_mental`.
 - datos_filtrados_normalizados.csv: Datos normalizados para PCA y clustering.
@@ -41,26 +42,25 @@ Cada dataset contiene variables sobre síntomas emocionales, impacto percibido, 
    - Perfil medio por clúster (síntomas, impacto y distribución sociodemográfica).
    - Visualizaciones mediante heatmaps, PCA y gráficos de barras.
    
-##Resultados
+## Resultados
 - Todos los gráficos y tablas generados se encuentran en la carpeta `resultados/`.
 - Los subdirectorios están organizados por técnica:
   - `PCA/`: Componentes principales y biplots.
   - `LDA_RF/`: Matrices de confusión, curvas ROC y variables importantes.
   - `clustering/`: Heatmaps, visualizaciones K-means, PCA y distribución por clúster.
 
-##Reproducir el análisis
+## Reproducir el análisis
 1. Clonar el repositorio
 2. Abrir RStudio
 3. Ejecutar los scripts en orden: 01_carga_paquetes.R → 02_preprocesamiento.R → PCA + LDA → Random Forest → Clustering
 4. Los resultados se guardarán automáticamente en Resultados/
 
-##Contacto
+## Contacto
 
 - Nombre: Ángel Arostegui Gros
 - Email: arosteguigrosangel1994@gmail.com
 - GitHub: Arostegui33 (https://github.com/Arostegui33)
 
-##Licencia
+## Licencia
 
 Licencia: MIT
-
