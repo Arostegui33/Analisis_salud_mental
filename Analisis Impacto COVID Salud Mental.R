@@ -34,7 +34,7 @@ library(grid)
 # ============================
 
 # Cargar datos
-datos <- read_sav("C:/Users/Angel Arostegui Gros/Desktop/Trabajo Estadistica/3312.sav")
+datos <- read_sav("datos/3312.sav")
 
 # Reducción de variables no relevantes
 datos <- datos[, -c(1:4, 7:9, 12, 15, 191, 199:205, 207:214, 216:353)]

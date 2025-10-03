@@ -1,0 +1,9 @@
+.Rhistory
+.RData
+.Rproj.user/
+.Rproj
+*.RData
+*.rda
+__pycache__/
+/datos/*.sav
+/resultados/*
