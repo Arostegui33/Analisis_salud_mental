@@ -766,6 +766,7 @@ for(pc in pcs_importantes){
 # PCA - GALICIA
 # ==============================
 
+# Filtrar solo Galicia
 datos_gl <- subset(datos_filtrados, CCAA == "Galicia")
 
 # Convertir variables P3 y P3A a numéricas
@@ -1075,12 +1076,11 @@ abline(v = 15, col = "blue", lty = 2)
 # Scores PC1 a PC15
 scores_pv <- as.data.frame(pca_pv$x[, 1:15])
 
-# Top 5 loadings por PC
-library(dplyr)
-library(reshape2)
-
-loadings_pv_df <- as.data.frame(pca_pv$rotation[, 1:15])
+# Loadings PC1 a PC15 y top 5 por PC - País Vasco
+loadings_pv <- pca_pv$rotation[, 1:15]
+loadings_pv_df <- as.data.frame(loadings_pv)
 loadings_pv_df$Variable <- rownames(loadings_pv_df)
+
 loadings_long_pv <- melt(loadings_pv_df, id.vars = "Variable",
                          variable.name = "PC", value.name = "Loading")
 
@@ -1092,18 +1092,15 @@ top_loadings_pv <- loadings_long_pv %>%
   mutate(Variable = factor(Variable, levels = Variable[order(Loading)])) %>%
   ungroup()
 
-# Gráfico de loadings
-library(ggplot2)
 ggplot(top_loadings_pv, aes(x = Variable, y = Loading, fill = Loading)) +
   geom_bar(stat = "identity") +
-  geom_text(aes(label = round(Loading, 2)),
-            position = position_stack(vjust = 0.5),
-            size = 2) +
+  geom_text(aes(label = round(Loading, 2)), position = position_stack(vjust = 0.5), size = 2) +
   coord_flip() +
   facet_wrap(~ PC, scales = "free_y", ncol = 3) +
   scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
-  labs(title = "Top 5 Loadings PC1 a PC15 (País Vasco)", x = "Variable", y = "Carga (Loading)") +
-  theme_minimal(base_size = 9)
+  theme_minimal(base_size = 9) +
+  labs(title = "Top 5 Loadings PC1-PC15 (País Vasco)", x = "Variable", y = "Carga (Loading)")
+
 
 # ==============================
 # Preparar variable de respuesta para LDA
